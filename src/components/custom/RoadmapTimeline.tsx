@@ -10,7 +10,7 @@ interface TimelineItem {
 
 export function RoadmapTimeline({ items }: { items: TimelineItem[] }) {
   return (
-    <div className="relative">
+    <div className="flex flex-col items-center">
       {items.map((item, index) => (
         <div
           key={index}
