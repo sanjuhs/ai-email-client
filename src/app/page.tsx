@@ -11,6 +11,7 @@ import {
   CardContent,
 } from "@/components/ui/card";
 import { Github, Linkedin, Mail } from "lucide-react";
+import { RoadmapTimeline } from "@/components/custom/RoadmapTimeline";
 
 export default function Home() {
   return (
@@ -18,11 +19,19 @@ export default function Home() {
       <header className="container mx-auto py-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center space-x-4">
-            <Image src="/logo.svg" alt="Hugin Logo" width={40} height={40} />
+            <Image
+              src="/img/logo1.png"
+              alt="Hugin Logo"
+              width={40}
+              height={40}
+            />
             <span className="text-2xl font-bold">Hugin</span>
           </div>
           <div className="flex space-x-4">
-            <Link href="https://github.com/your-repo" target="_blank">
+            <Link
+              href="https://github.com/sanjuhs/ai-email-client"
+              target="_blank"
+            >
               <Github className="h-6 w-6" />
             </Link>
             <Link href="https://linkedin.com/your-post" target="_blank">
@@ -92,7 +101,35 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-gray-100 py-20">
+        {/* <section className="bg-gray-100 ">
+          <RoadmapTimeline
+            items={[
+              {
+                date: "Q2 2024",
+                title: "Gmail API Integration",
+                description: "Seamless connection with your Gmail account",
+                status: "completed",
+              },
+              {
+                date: "Q3 2024",
+                title: "AI-powered Email Classification",
+                description: "Intelligent sorting of your emails",
+                status: "in-progress",
+              },
+              {
+                date: "Q4 2024",
+                title: "Custom Tagging System",
+                description: "Flexible organization of your emails",
+                status: "planned",
+              },
+              {
+                date: "Q1 2025",
+                title: "Advanced Search Functionality",
+                description: "Find any email in seconds",
+                status: "planned",
+              },
+            ]}
+          />
           <div className="container mx-auto">
             <h2 className="text-3xl font-bold mb-10 text-center">Roadmap</h2>
             <div className="space-y-4">
@@ -108,6 +145,42 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section> */}
+
+        <section className="bg-gray-100 py-20">
+          <div className="container mx-auto">
+            <h2 className="text-3xl font-bold mb-10 text-center">
+              Our Journey
+            </h2>
+            <RoadmapTimeline
+              items={[
+                {
+                  date: "Q2 2024",
+                  title: "Gmail API Integration",
+                  description: "Seamless connection with your Gmail account",
+                  status: "completed",
+                },
+                {
+                  date: "Q3 2024",
+                  title: "AI-powered Email Classification",
+                  description: "Intelligent sorting of your emails",
+                  status: "in-progress",
+                },
+                {
+                  date: "Q4 2024",
+                  title: "Custom Tagging System",
+                  description: "Flexible organization of your emails",
+                  status: "planned",
+                },
+                {
+                  date: "Q1 2025",
+                  title: "Advanced Search Functionality",
+                  description: "Find any email in seconds",
+                  status: "planned",
+                },
+              ]}
+            />
           </div>
         </section>
       </main>
